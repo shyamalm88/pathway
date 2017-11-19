@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'pwfont';
+    src: url('scss/pw-left-nav/fonts/pwfont.eot?sbdd3g');
+    src: url('scss/pw-left-nav/fonts/pwfont.eot?sbdd3g#iefix') format('embedded-opentype'), url('scss/pw-left-nav/fonts/pwfont.ttf?sbdd3g') format('truetype'), url('scss/pw-left-nav/fonts/pwfont.woff?sbdd3g') format('woff'), url('scss/pw-left-nav/fonts/pwfont.svg?sbdd3g#pwfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="pi-"],
+[class*=" pi-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'pwfont';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pi-sprint:before {
+    content: "\e900";
+}
+
+.pi-board:before {
+    content: "\e901";
+}
+
+.pi-backlog:before {
+    content: "\e902";
+}
+
+.pi-report:before {
+    content: "\e903";
+}
+
+.pi-component:before {
+    content: "\e904";
+}
+
+.pi-app:before {
+    content: "\e905";
+}
+
+.pi-settings:before {
+    content: "\e906";
+}
+
+.pi-issue:before {
+    content: "\e907";
+}
+
+.pi-release:before {
+    content: "\e908";
+}

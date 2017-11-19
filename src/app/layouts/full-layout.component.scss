@@ -1,0 +1,72 @@
+.pw-left-nav-pane{
+    height: -webkit-calc(100% - 0px);
+    height: -moz-calc(100% - 0px);
+    height: calc(100% - 0px);
+    transition: height 0.25s ease-in-out;
+    -webkit-transition: height 0.25s ease-in-out;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    position: fixed;
+    left: 0;
+    width: inherit;
+    z-index: 300;
+    .expander{
+        cursor: ew-resize;
+        height: 100%;
+        position: absolute;
+        right: -6px;
+        width: 12px;
+        &:before{
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: 5px;
+        }
+        .button-expander{
+            position: relative;
+            top: -webkit-calc(50% - 18px);
+            top: -moz-calc(50% - 18px);
+            top: calc(50% - 18px);
+            height: 36px;
+            background: none;
+            border: none;
+            color: transparent;
+            width: 24px; 
+            left: 0;
+            cursor: pointer; 
+            border-radius: 4px;
+            &:hover:before, &:hover:after, &:focus:before, &:focus:after{
+                opacity: 1;
+            }
+            &:before {
+                top: 10px;
+                transform-origin: 1px 7px;
+                -ms-transform-origin: 1px 7px;
+                -webkit-transform-origin: 1px 7px;
+            }
+            &:after{
+                top: 16px;
+                transform-origin: 1px 1px;
+                -ms-transform-origin: 1px 1px;
+                -webkit-transform-origin: 1px 1px;
+            }
+            &:before, &:after{ 
+                opacity: 0;
+                transition: -ms-transform 200ms ease-in-out,-webkit-transform 200ms ease-in-out,transform 200ms ease-in-out, opacity 300ms ease-in-out;
+                -webkit-transition: -webkit-transform 200ms ease-in-out,transform 200ms ease-in-out, opacity 300ms ease-in-out;
+                transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+            }
+        }
+    }
+}
