@@ -1,0 +1,43 @@
+.pw-left-project-nav{
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    -webkit-flex-grow: 1;
+    flex-shrink: 1;
+    -ms-flex-negative: 1;
+    -webkit-flex-shrink: 1;
+    min-width: 64px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    &-container{
+        background-color: #F4F5F7;
+        color: #42526E;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        padding-top: 16px;
+        width: 100%;
+        &-project-description{
+            flex-basis: auto;
+            -ms-preferred-size: auto;
+            -webkit-flex-basis: auto;
+            flex-shrink: 0;
+            -ms-flex-negative: 0;
+            -webkit-flex-shrink: 0;
+            min-height: 64px;
+            overflow: hidden;
+            padding: 0 16px 0 16px;
+            transition: -ms-flex-basis 220ms,-ms-flex-basis 220ms,-webkit-flex-basis 220ms,-webkit-flex-basis 220ms,flex-basis 220ms, padding 220ms;
+            -webkit-transition: -webkit-flex-basis 220ms,-webkit-flex-basis 220ms,flex-basis 220ms, padding 220ms;
+        }
+    }
+}
