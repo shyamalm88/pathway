@@ -30,6 +30,7 @@
     "font-awesome": "^4.7.0",
     "http": "0.0.0",
     "mongoose": "^4.13.1",
+    "ng-spin-kit": "^5.1.1",
     "ngx-bootstrap": "^2.0.0-beta.9",
     "passport": "^0.4.0",
     "path": "^0.12.7",
