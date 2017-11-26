@@ -30,7 +30,7 @@
                                         line-height: 20px;
                                         background-color: #f4f5f7;
                                         border: 1px solid #dfe1e6;
-                                        padding: 4px 7px 5px;
+                                        padding: 4px 7px 3px;
                                         border-left: 1px solid transparent;
                                     }
                                     .form-control {
@@ -59,7 +59,7 @@
                 width: 100%;
                 height: calc(100vh - 0px);
                 .pw-classification-menu-column {
-                    width: 10px;
+                    width: 20px;
                     display: table-cell;
                     vertical-align: top;
                     .pw-classification-menu {
@@ -287,6 +287,232 @@
                                                 }
                                             }
                                         }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .pw-scrum-main-column {
+                    display: table-cell;
+                    height: inherit;
+                    vertical-align: top;
+                    .pw-backlog {
+                        border-left: none;
+                        background: #fff;
+                        height: inherit;
+                        overflow-y: auto;
+                        margin-left: 10px;
+                        .pw-backlog-container {
+                            background: #fff;
+                            border: none;
+                            border-width: 0 0 2px;
+                            -moz-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            padding: 0;
+                            position: relative;
+                            margin-bottom: 20px;
+                            &.backlog{
+                                margin-top: 20px;
+                            }
+                            .pw-backlog-header {
+                                min-height: 33px;
+                                padding-top: 14px;
+                                .pw-expander {
+                                    cursor: pointer;
+                                    display: inline-block;
+                                    width: 20px;
+                                    text-align: center;
+                                    vertical-align: sub;
+                                }
+                                .pw-name {
+                                    display: inline-block;
+                                    color: #333;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    line-height: 1.5;
+                                    line-height: 1.428571;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    max-width: 20%;
+                                    vertical-align: middle;
+                                }
+                                .pw-issue-count {
+                                    color: #7A869A;
+                                    margin-left: 10px;
+                                    display: inline-block;
+                                }
+                                .pw-sprint-edit {
+                                    visibility: visible;
+                                    margin-left: 10px;
+                                    display: inline-block;
+                                    .noColorBtn {
+                                        color: #0052cc;
+                                        background: 0 0;
+                                        padding: 4px 10px;
+                                        height: 2.28571429em;
+                                        line-height: 1.57142857em;
+                                        text-decoration: none;
+                                        box-shadow: none;
+                                        border-color: transparent;
+                                        box-sizing: border-box;
+                                        border-radius: 3.01px;
+                                        display: inline-block;
+                                        font-family: inherit;
+                                        vertical-align: baseline;
+                                        white-space: nowrap;
+                                    }
+                                }
+                                .pw-controls{
+                                    float: right;
+                                    margin: 5px 18px 0 10px;
+                                    width: auto;
+                                    table-layout: auto;
+                                    display: table;
+                                    box-sizing: border-box;
+                                    border-spacing: 0;
+                                    .pw-item{
+                                        padding: 0 1px;
+                                        box-sizing: border-box;
+                                        display: table-cell;
+                                        margin: 0;
+                                        vertical-align: top;
+                                        .btn-primary{
+                                            background: #0052cc;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            .pw-scrum-meta{
+                                display: block;
+                                .pw-work-status{
+                                    padding: 5px 20px;
+                                }
+                                .pw-issues{
+                                    position: relative;
+                                    margin: 10px 20px;
+                                    margin-bottom: 0;
+                                    .issue-card{
+                                        background: #f9f9f9;
+                                        border: 1px solid #DFE1E6;
+                                        color: #333;
+                                        cursor: move;
+                                        font-size: 14px;
+                                        line-height: 1.42857143;
+                                        margin-top: -1px;
+                                        position: relative;
+                                        &.selected{
+                                            background: #deebff;
+                                            .item-importance{
+                                                background-color: #deebff !important;
+                                            }
+                                        }
+                                        .issue-content{
+                                            padding-left: 0;
+                                            -moz-box-sizing: border-box;
+                                            -webkit-box-sizing: border-box;
+                                            box-sizing: border-box;
+                                            padding-left: 5px;
+                                            overflow: hidden;
+                                            position: relative;
+                                            white-space: nowrap;
+                                            .issue-main-fields{
+                                                margin: 5px 0;
+                                                display: block;
+                                                height: 22px;
+                                                position: relative;
+                                                .expander-spacer{
+                                                    width: 16px;
+                                                    display: inline-block;
+                                                }
+                                                .item-spacer{
+                                                    height: 16px;
+                                                    width: 16px;
+                                                    margin-right: 10px;
+                                                    display: inline-block;
+                                                }
+                                                .item-summary{
+                                                    color: #172B4D;
+                                                    overflow: hidden;
+                                                    max-width: 100%;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                    margin-left: 0;
+                                                    text-overflow: ellipsis;
+                                                }
+                                                .item-importance{
+                                                    background-color: #f9f9f9;
+                                                    position: absolute;
+                                                    right: 0;
+                                                    top: -4px;
+                                                    margin: 0;
+                                                    box-sizing: border-box;
+                                                    padding: 4px 5px;
+                                                    height: 22px;
+                                                    &.selected{
+                                                        background: #deebff;
+                                                    }
+                                                    .label-version{
+                                                        max-width: 12em;
+                                                        vertical-align: middle;
+                                                        overflow: hidden;
+                                                        text-overflow: ellipsis;
+                                                        white-space: nowrap;
+                                                        margin-right: 10px;
+                                                        background: #dfe1e6;
+                                                        border-radius: 3px;
+                                                        color: #253858;
+                                                        box-sizing: border-box;
+                                                        color: #333;
+                                                        display: inline-block;
+                                                        font-size: 11px;
+                                                        font-weight: bold;
+                                                        line-height: 99%;
+                                                        margin: 0;
+                                                        padding: 4px 5px;
+                                                        text-align: center;
+                                                        text-decoration: none;
+                                                        text-transform: uppercase;
+                                                    }
+                                                    .assigned-scrum{
+                                                        text-transform: uppercase;
+                                                        color: #5E6C84;
+                                                        margin: 0px 10px;
+                                                        display: inline-block;
+                                                        vertical-align: middle;
+                                                    }
+                                                    .item-priority{
+                                                        margin-right: 10px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .pw-iic{
+                                position: relative;
+                                .pw-iic-trigger{
+                                    position: relative;
+                                    button{
+                                        -webkit-appearance: none;
+                                        background-color: transparent;
+                                        border-width: 0;
+                                        font-family: inherit;
+                                        text-decoration: none;
+                                        transition-property: display;
+                                        color: #999;
+                                        cursor: pointer;
+                                        min-height: 40px;
+                                        padding: 10px;
+                                        text-align: left;
+                                        width: 100%;
+                                        font-size: 13px;
+                                        align-items: flex-start;
+                                        display: block;                                    
                                     }
                                 }
                             }

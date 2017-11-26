@@ -19,7 +19,7 @@ import { SharedModule } from './shared/shared-module/shared-module.module';
     AppComponent,
     FullLayoutComponent,
     PwLeftMainNavComponent,
-    PwLeftProjectNavComponent
+    PwLeftProjectNavComponent,
   ],
   imports: [
     BrowserModule,
