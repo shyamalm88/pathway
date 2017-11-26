@@ -7,7 +7,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class VersionComponent implements OnInit {
-
+  public oneAtATime: Boolean = true;
   constructor() { }
 
   ngOnInit() {
