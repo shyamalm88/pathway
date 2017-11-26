@@ -16,7 +16,7 @@
               <button class="btn btn-primary">Start Sprint</button>
             </div>
             <div class="pw-item">
-              <button class="btn btn-dark">
+              <button class="btn btn-default">
                 <i class="ion-android-more-horizontal"></i>
               </button>
             </div>
@@ -34,100 +34,124 @@
                     <img src="./assets/img/svg/story.svg" alt="" srcset="">
                   </div>
                   <div class="item-summary">
-                      As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the Description tab on the right
+                    As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the
+                    Description tab on the right
                   </div>
                   <div class="item-importance">
                     <span class="label-version">Version 2.0</span>
                     <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
-                    <span class="item-priority"><i class="ion-arrow-up-c text-danger"></i></span>
+                    <span class="item-priority">
+                      <i class="ion-arrow-up-c text-medium"></i>
+                    </span>
                     <span class="badge">2</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="issue-card">
-                <div class="issue-content">
-                  <div class="issue-main-fields">
-                    <div class="expander-spacer"></div>
-                    <div class="item-spacer">
-                      <img src="./assets/img/svg/story.svg" alt="" srcset="">
-                    </div>
-                    <div class="item-summary">
-                        As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the Description tab on the right
-                    </div>
-                    <div class="item-importance">
-                      <span class="label-version">Version 2.0</span>
-                      <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
-                      <span class="item-priority"><i class="ion-arrow-up-c text-danger"></i></span>
-                      <span class="badge">2</span>
-                    </div>
+              <div class="issue-content">
+                <div class="issue-main-fields">
+                  <div class="expander-spacer"></div>
+                  <div class="item-spacer">
+                    <img src="./assets/img/svg/story.svg" alt="" srcset="">
+                  </div>
+                  <div class="item-summary">
+                    As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the
+                    Description tab on the right
+                  </div>
+                  <div class="item-importance">
+                    <span class="label-version">Version 2.0</span>
+                    <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
+                    <span class="item-priority">
+                      <i class="ion-arrow-up-c text-lowest"></i>
+                    </span>
+                    <span class="badge">2</span>
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="pw-iic">
+              <div class="pw-iic-trigger">
+                <button class="btn btn-link">
+                  <i class="ion-android-add"></i> Create Issue</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="clearfix"></div>
       <div class="pw-backlog-container backlog">
-          <div class="pw-backlog-header">
-            <div class="pw-expander">
-              <!-- <i class="ion-ios-arrow-down"></i> -->
-            </div>
-            <div class="pw-name">Backlog</div>
-            <div class="pw-issue-count">2 Issue(s)</div>
-            <div class="pw-sprint-edit">
-              <button class="btn noColorBtn">Edit Sprint</button>
-            </div>
-            <div class="pw-controls">
-              <div class="pw-item">
-                <button class="btn btn-default">Create Sprint</button>
-              </div>
-            </div>
+        <div class="pw-backlog-header">
+          <div class="pw-expander">
+            <!-- <i class="ion-ios-arrow-down"></i> -->
           </div>
-          <div class="pw-scrum-meta">
-            <div class="pw-work-status"></div>
-            <div class="pw-issues">
-              <div class="issue-card">
-                <div class="issue-content">
-                  <div class="issue-main-fields">
-                    <div class="expander-spacer"></div>
-                    <div class="item-spacer">
-                      <img src="./assets/img/svg/bug.svg" alt="" srcset="">
-                    </div>
-                    <div class="item-summary">
-                        As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the Description tab on the right
-                    </div>
-                    <div class="item-importance">
-                      <span class="label-version">Version 2.0</span>
-                      <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
-                      <span class="item-priority"><i class="ion-arrow-down-c text-success"></i></span>
-                      <span class="badge">2</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="issue-card">
-                  <div class="issue-content">
-                    <div class="issue-main-fields">
-                      <div class="expander-spacer"></div>
-                      <div class="item-spacer">
-                        <img src="./assets/img/svg/story.svg" alt="" srcset="">
-                      </div>
-                      <div class="item-summary">
-                          As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the Description tab on the right
-                      </div>
-                      <div class="item-importance">
-                        <span class="label-version">Version 2.0</span>
-                        <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
-                        <span class="item-priority"><i class="ion-arrow-up-c text-danger"></i></span>
-                        <span class="badge">2</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="pw-name">Backlog</div>
+          <div class="pw-issue-count">2 Issue(s)</div>
+          <div class="pw-sprint-edit">
+            <button class="btn noColorBtn">Edit Sprint</button>
+          </div>
+          <div class="pw-controls">
+            <div class="pw-item">
+              <button class="btn btn-default">Create Sprint</button>
             </div>
           </div>
         </div>
+        <div class="pw-scrum-meta">
+          <div class="pw-work-status"></div>
+          <div class="pw-issues">
+            <div class="issue-card">
+              <div class="issue-content">
+                <div class="issue-main-fields">
+                  <div class="expander-spacer"></div>
+                  <div class="item-spacer">
+                    <img src="./assets/img/svg/bug.svg" alt="" srcset="">
+                  </div>
+                  <div class="item-summary">
+                    As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the
+                    Description tab on the right
+                  </div>
+                  <div class="item-importance">
+                    <span class="label-version">Version 2.0</span>
+                    <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
+                    <span class="item-priority">
+                      <i class="ion-arrow-down-c text-high"></i>
+                    </span>
+                    <span class="badge">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="issue-card">
+              <div class="issue-content">
+                <div class="issue-main-fields">
+                  <div class="expander-spacer"></div>
+                  <div class="item-spacer">
+                    <img src="./assets/img/svg/story.svg" alt="" srcset="">
+                  </div>
+                  <div class="item-summary">
+                    As an Agile team, I'd like to learn about Scrum >> Click the "SCRUM-1" link at the left of this row to see detail in the
+                    Description tab on the right
+                  </div>
+                  <div class="item-importance">
+                    <span class="label-version">Version 2.0</span>
+                    <a href="#" (click)="false" class="assigned-scrum">SCRUM-1</a>
+                    <span class="item-priority">
+                      <i class="ion-arrow-up-c text-low"></i>
+                    </span>
+                    <span class="badge">2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pw-iic">
+              <div class="pw-iic-trigger">
+                <button class="btn btn-link">
+                  <i class="ion-android-add"></i> Create Issue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

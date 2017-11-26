@@ -22,8 +22,36 @@
     color: #505F79;
     background: transparent;
     border: none;
-    &:hover, &:active, &.active{
+    &:hover,
+    &:active,
+    &.active {
         background: #505f79 !important;
         color: #fff !important;
+    }
+}
+
+.btn-default {
+    color: #505f79;
+    background: #f4f5f7;
+    border-radius: 3.01px;
+    border: 1px solid #efefef;
+    &:hover {
+        background: #ebecf0;
+        border: 1px solid #d8d8d8;
+    }
+}
+
+.text {
+    &-medium {
+        color: #FF9800
+    }
+    &-low {
+        color: #8bc34a
+    }
+    &-high {
+        color: #f44336
+    }
+    &-lowest{
+        color: #4caf50
     }
 }

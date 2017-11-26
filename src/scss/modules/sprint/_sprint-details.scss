@@ -1,0 +1,339 @@
+.pw-detail-view {
+    display: table-cell;
+    height: inherit;
+    vertical-align: top;
+    width: 400px;
+    .pw-detail-contents {
+        height: inherit;
+        border: 1px solid #ccc;
+        border-left: 1px solid #F4F5F7;
+        background-size: 40px;
+        background: #fff url('./assets/img/pw-detail.png') repeat-y 0 0;
+        border-right: none;
+        border-top: none;
+        position: relative;
+        .pw-detail-issue {
+            padding: 0;
+            color: #333;
+            display: block;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            height: inherit;
+            overflow: hidden;
+            position: relative;
+            .pw-detail-head {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+                margin-bottom: 10px;
+                padding: 0 0 0 48px;
+                width: 100%;
+                .pw-controls {
+                    float: right;
+                    margin-top: 10px;
+                    .close {
+                        color: #292929;
+                        cursor: pointer;
+                        display: inline-block;
+                        padding: 4px;
+                        margin: 0px 5px;
+                        vertical-align: top;
+                        font-size: 12px;
+                    }
+                }
+                .pw-group {
+                    .pw-project-avatar {
+                        left: 4px;
+                        height: 32px;
+                        position: absolute;
+                        top: 12px;
+                        width: 32px;
+                        border-radius: 3px 3px 3px 3px;
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    .pw-key-group {
+                        margin-right: 80px;
+                        .pw-project,
+                        .pw-key {
+                            display: inline-block;
+                            margin-left: 4px;
+                            margin-top: 12px;
+                        }
+                        .pw-project:after {
+                            content: "/";
+                            padding: 0 4px 0 5px;
+                        }
+                        .pw-key {
+                            color: #5E6C84;
+                        }
+                    }
+                    .pw-detail-summary {
+                        margin-right: 20px;
+                        margin-top: 10px;
+                        .pw-detail-list {
+                            display: table;
+                            margin-top: 1px;
+                            position: relative;
+                            table-layout: fixed;
+                            width: 100%;
+                            padding: 4px 30px 4px 4px;
+                        }
+                    }
+                    .pw-statistic-group {
+                        padding-right: 20px;
+                        margin-left: 3px;
+                        position: relative;
+                        margin-top: 10px;
+                        .item,
+                        .item-desciption {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 49%;
+                            padding: 1px 0px;
+                            .cont {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pw-detail-nav {
+                clear: both;
+                height: inherit;
+                position: relative;
+                .pw-detail-nav-content {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: inherit;
+                    overflow: auto;
+                    width: 100%;
+                    height: calc(100vh - 200px);
+                    padding: 0 20px 0 60px;
+                    .module {
+                        clear: both;
+                        float: left;
+                        width: 100%;
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        &:before,
+                        &:after {
+                            content: " ";
+                            display: table;
+                        }
+                        .mod-header {
+                            &:before,
+                            &:after {
+                                content: " ";
+                                display: table;
+                            }
+                            h2 {
+                                color: #333;
+                                font-size: 14px;
+                                font-weight: bold;
+                                line-height: 1.5;
+                                margin-top: 10px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                        .mod-content {
+                            padding-left: 0;
+                            margin-top: 5px;
+                            display: block;
+                            &:before,
+                            &:after {
+                                content: " ";
+                                display: table;
+                            }
+                            .property-list {
+                                display: block;
+                                margin: 0;
+                                list-style: none;
+                                padding: 0;
+                                &:before,
+                                &:after {
+                                    content: " ";
+                                    display: table;
+                                }
+                                .iiten {
+                                    clear: none;
+                                    float: none;
+                                    width: auto;
+                                    width: initial;
+                                    padding: 0;
+                                    position: relative;
+                                    margin: 5px 0 0;
+                                    .wrap {
+                                        padding: 0 10px 0 120px;
+                                        &.fullwidth{
+                                            padding: 0;
+                                        }
+                                        &:before,
+                                        &:after {
+                                            content: " ";
+                                            display: table;
+                                        }
+                                        strong.name {
+                                            margin-left: -120px;
+                                            width: 120px;
+                                            display: inline-block;
+                                            vertical-align: middle;
+                                            font-weight: 500;
+                                        }
+                                        .fileUploader{
+                                            width: 100%;
+                                            overflow: hidden;
+                                            overflow-x: scroll;
+                                        }
+                                        .status {
+                                            word-break: break-word;
+                                            display: inline-block;
+                                            max-width: 100%;
+                                            padding-bottom: 2px;
+                                            padding-left: 5px;
+                                            padding-top: 2px;
+                                            position: relative;
+                                            vertical-align: top;
+                                            min-width: 80%;
+                                            .my-drop-zone{
+                                                background: #fff;
+                                                border: 1px dashed #969aa0;
+                                                text-align: center;
+                                                svg {
+                                                    width: 1em;
+                                                    height: 1em;
+                                                    vertical-align: middle;
+                                                    fill: #0a51cd;
+                                                    margin-top: -0.25em;
+                                                    margin-right: 0.25em;
+                                                }
+                                            }
+                                            .inputfile{
+                                                width: 0.1px;
+                                                height: 0.1px;
+                                                opacity: 0;
+                                                overflow: hidden;
+                                                position: absolute;
+                                                z-index: -1;
+                                            }
+                                            .inputfile + label {
+                                                max-width: 80%;
+                                                font-size: 1.25rem;
+                                                font-weight: 700;
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                cursor: pointer;
+                                                display: inline-block;
+                                                overflow: hidden;
+                                                padding: 0.325rem .25rem;
+                                                vertical-align: top;
+                                                color: #0a51cd;
+                                                margin-bottom: 0px;
+                                                
+                                            }
+                                            
+                                            .status-badge {
+                                                background-color: #dfe1e6;
+                                                border-color: #dfe1e6;
+                                                color: #253858;
+                                                display: inline-block;
+                                                font-weight: 600;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                vertical-align: middle;
+                                                font-size: 12px;
+                                                padding: 4px 6px;
+                                                border-radius: 3px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pw-detail-nav-menu{
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                font-size: 12px;
+                left: 0;
+                position: absolute;
+                top: 90px;
+                width: 40px;
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li.pw-detail-nav-item{
+                        background: #F4F5F7;
+                        padding: 4px;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        margin: 0;
+                        min-height: 40px;
+                        padding: 0;
+                        width: 100%;
+                        text-align: center;
+                        a{
+                            padding: 6px 0;
+                            -moz-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            display: block;
+                            padding: 10px 0;
+                            width: 100%;
+                            color: #777777;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.overlay-edit {
+    box-shadow: none;
+    border: none;
+    background-color: #F4F5F7;
+    color: #707070;
+    cursor: pointer;
+    transition: opacity 150ms ease-in 0ms;
+    z-index: auto;
+    box-sizing: border-box;
+    opacity: 0;
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-position: 4px 4px;
+    bottom: 0;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 24px;
+    z-index: -1;
+    padding-left: 6px;
+}
+
+.edit {
+    -webkit-transition: opacity 150ms ease-in 0ms;
+    transition: opacity 150ms ease-in 0ms;
+    &:hover {
+        background: #f0f0f0;
+        .overlay-edit {
+            opacity: 1;
+            z-index: auto;
+        }
+    }
+}
