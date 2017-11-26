@@ -1,0 +1,30 @@
+@import 'header/header';
+@import 'verepic/version-epic';
+@import 'sprint/sprint';
+@import 'sprint/sprint-details';
+
+#content {
+    flex: 1;
+    order: 2;
+    margin: 0 32px;
+    box-sizing: border-box;
+    clear: both;
+    position: relative;
+    &:before {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .pw-page-panel{
+        background-color: #fff;
+        border: 0 solid transparent;
+        box-sizing: border-box;
+        clear: both;
+        display: block;
+        margin: 20px 0 0 0;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        margin-top: 0;
+    }
+}

@@ -1,6 +1,29 @@
 @import 'variables/typo';
 @import 'ion/ionicons';
 @import 'pw-left-nav/pw-left-nav-icon';
-@import 'modules/pw-left-side-menu'; 
+@import 'modules/pw-left-side-menu';
 @import 'modules/pw-left-side-project-nav';
+@import 'modules/main-content';
+#page-body {
+    display: flex;
+    min-width: fit-content;
+    height: calc(100% - 0px);
+    #navigation-app {
+        order: 1;
+        flex: initial;
+    }
+}
 
+.relative {
+    position: relative;
+}
+
+.noColorBtn {
+    color: #505F79;
+    background: transparent;
+    border: none;
+    &:hover, &:active, &.active{
+        background: #505f79 !important;
+        color: #fff !important;
+    }
+}

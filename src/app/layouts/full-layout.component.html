@@ -1,12 +1,17 @@
 <div id="page">
   <div id="page-body">
-    <div id="navigation-app">
-      <div class="pw-left-nav-pane" style="width:304px">
+    <div id="navigation-app"  style="width:304px">
+      <div class="pw-left-nav-pane">
         <app-pw-left-main-nav class="pw-left-nav-container"></app-pw-left-main-nav>
         <div class="expander">
           <button aria-expanded="true" class="button-expander"></button>
         </div>
       </div>
     </div>
+    <main id="content" class="z-index-content">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </main>
   </div>
 </div>

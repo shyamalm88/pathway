@@ -7,7 +7,7 @@ import { FullLayoutComponent } from './layouts/full-layout.component';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'scrum',
     pathMatch: 'full',
   },
   {
@@ -18,8 +18,8 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'dashboard',
-        loadChildren: './dashboard/dashboard.module#DashboardModule'
+        path: 'scrum',
+        loadChildren: './scrum/scrum.module#ScrumModule'
       }
     ]
   }
