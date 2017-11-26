@@ -1,0 +1,314 @@
+<div class="animated fadeIn">
+  <div class="pw-page-panel">
+    <div class="pw-header">
+      <div class="pw-header-container">
+        <div class="pw-header-container-inner">
+          <a class="pw-header-link" href="#">
+            <span class="pw-header-link-span">
+              <span class="pw-link">New Board</span>
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="pw-top-header">
+        <div class="pw-modes-tools">
+          <div class="pw-view-pluggable">
+            <div class="pw-view-section">
+              <button class="board-tools-section-button">
+                <span class="ion-more"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pw-view-selector">
+          <h1>
+            <span class="subnavigator-title" title="Backlog">Backlog</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="pw-content-main">
+      <div class="pw-realative">
+        <div class="pw-operations">
+          <div class="pw-controls">
+            <div class="pw-quick-filters">
+              <ul>
+                <li class="backlog-search-container">
+                  <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <span class="input-group-addon">
+                      <button type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                      </button>
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <span dropdown class="relative">
+                    <button dropdownToggle type="button" class="btn dropdown-toggle noColorBtn">
+                      Quick Filters
+                      <span class="fa fa-angle-down"></span>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu">
+                      <li *ngFor="let choice of items">
+                        <a class="dropdown-item" href="#" (click)="false">{{choice}}</a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+                <li>
+                  <span dropdown class="relative">
+                    <button dropdownToggle type="button" class="btn dropdown-toggle noColorBtn">
+                      Assignee
+                      <span class="fa fa-angle-down"></span>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu">
+                      <li *ngFor="let choice of items">
+                        <a class="dropdown-item" href="#" (click)="false">{{choice}}</a>
+                      </li>
+                    </ul>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="pw-plan">
+          <div class="pw-plan-group">
+            <div class="pw-classification-menu-column">
+              <ul class="pw-classification-menu">
+                <li>
+                  <span class="pw-inner">Versions</span>
+                </li>
+                <li>
+                  <span class="pw-inner">Epics</span>
+                </li>
+              </ul>
+            </div>
+            <div class="pw-version-column">
+              <div class="pw-classification-group">
+                <div class="pw-classification-header">
+                  <div class="pw-actions">
+                    <button class="btn noColorBtn crtv">Create Version</button>
+                    <span class="closecrtv">
+                      <i class="fa fa-close"></i>
+                    </span>
+                  </div>
+                  <h2>Versions</h2>
+                </div>
+                <div class="pw-classification-scrollview">
+                  <div class="pw-classification-item">
+                    <div class="pw-inner-in">
+                      <div class="pw-header-in">
+                        <h3 class="pw-name">All Issues</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pw-classification-item">
+                    <accordion [closeOthers]="oneAtATime" class="pw-inner-in">
+                      <accordion-group heading="Version 2.0" panelClass="">
+                        <div class="pw-expanded">
+                          <div class="aui-group">
+                            <div class="aui-item">Start Date</div>
+                            <div class="aui-item">
+                              <span class="field-value pw-editable">None</span>
+                            </div>
+                          </div>
+                          <div class="aui-group">
+                            <div class="aui-item">Release Date</div>
+                            <div class="aui-item">
+                              <span class="field-value pw-editable">23/12/2017</span>
+                            </div>
+                          </div>
+                          <div class="aui-group">
+                            <div class="aui-item">Issues</div>
+                            <div class="aui-item">
+                              <span class="aui-badge">7</span>
+                            </div>
+                          </div>
+                          <div class="aui-group">
+                            <div class="aui-item">Completed</div>
+                            <div class="aui-item">
+                              <span class="aui-badge">3</span>
+                            </div>
+                          </div>
+                          <div class="aui-group">
+                            <div class="aui-item">Unestimated</div>
+                            <div class="aui-item">
+                              <span class="aui-badge">7</span>
+                            </div>
+                          </div>
+                          <div class="aui-group">
+                            <div class="aui-item">Estimated</div>
+                            <div class="aui-item">
+                              <span class="aui-badge">7</span>
+                            </div>
+                          </div>
+                        </div>
+                      </accordion-group>
+                      <accordion-group heading="Version 3.0" panelClass="">
+                            <div class="pw-expanded">
+                              <div class="aui-group">
+                                <div class="aui-item">Start Date</div>
+                                <div class="aui-item">
+                                  <span class="field-value pw-editable">None</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Release Date</div>
+                                <div class="aui-item">
+                                  <span class="field-value pw-editable">23/12/2017</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Issues</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Completed</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">3</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Unestimated</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Estimated</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                            </div>
+                          </accordion-group>
+                    </accordion>
+                  </div>
+                  <div class="pw-classification-item">
+                        <div class="pw-inner-in">
+                          <div class="pw-header-in">
+                            <h3 class="pw-name">Issues Without Version</h3>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="pw-epic-column">
+              <div class="pw-classification-group">
+                <div class="pw-classification-header">
+                  <div class="pw-actions">
+                    <button class="btn noColorBtn crtv">Create Epic</button>
+                    <span class="closecrtv">
+                      <i class="fa fa-close"></i>
+                    </span>
+                  </div>
+                  <h2>Epic</h2>
+                </div>
+                <div class="pw-classification-scrollview">
+                  <div class="pw-classification-item">
+                    <div class="pw-inner-in">
+                      <div class="pw-header-in">
+                        <h3 class="pw-name">All Issues</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pw-classification-item">
+                        <accordion [closeOthers]="oneAtATime" class="pw-inner-in">
+                          <accordion-group heading="Epic 0" panelClass="">
+                            <div class="pw-expanded">
+                              <div class="aui-group">
+                                <div class="aui-item">Start Date</div>
+                                <div class="aui-item">
+                                  <span class="field-value pw-editable">None</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Release Date</div>
+                                <div class="aui-item">
+                                  <span class="field-value pw-editable">23/12/2017</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Issues</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Completed</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">3</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Unestimated</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                              <div class="aui-group">
+                                <div class="aui-item">Estimated</div>
+                                <div class="aui-item">
+                                  <span class="aui-badge">7</span>
+                                </div>
+                              </div>
+                            </div>
+                          </accordion-group>
+                          <accordion-group heading="Epic 1" panelClass="">
+                                <div class="pw-expanded">
+                                  <div class="aui-group">
+                                    <div class="aui-item">Start Date</div>
+                                    <div class="aui-item">
+                                      <span class="field-value pw-editable">None</span>
+                                    </div>
+                                  </div>
+                                  <div class="aui-group">
+                                    <div class="aui-item">Release Date</div>
+                                    <div class="aui-item">
+                                      <span class="field-value pw-editable">23/12/2017</span>
+                                    </div>
+                                  </div>
+                                  <div class="aui-group">
+                                    <div class="aui-item">Issues</div>
+                                    <div class="aui-item">
+                                      <span class="aui-badge">7</span>
+                                    </div>
+                                  </div>
+                                  <div class="aui-group">
+                                    <div class="aui-item">Completed</div>
+                                    <div class="aui-item">
+                                      <span class="aui-badge">3</span>
+                                    </div>
+                                  </div>
+                                  <div class="aui-group">
+                                    <div class="aui-item">Unestimated</div>
+                                    <div class="aui-item">
+                                      <span class="aui-badge">7</span>
+                                    </div>
+                                  </div>
+                                  <div class="aui-group">
+                                    <div class="aui-item">Estimated</div>
+                                    <div class="aui-item">
+                                      <span class="aui-badge">7</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </accordion-group>
+                        </accordion>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
