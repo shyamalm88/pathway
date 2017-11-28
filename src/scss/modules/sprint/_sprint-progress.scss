@@ -1,0 +1,236 @@
+.pw-work {
+    border-top: none;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: calc(100vh - 120px);
+    .pw-pool-column {
+        display: table-cell;
+        height: inherit;
+        vertical-align: top;
+        .pw-pool {
+            background: #fff;
+            overflow-y: auto;
+            position: relative;
+            height: inherit;
+            box-sizing: border-box;
+            z-index: 1;
+            padding: 20px 0 0;
+            display: block;
+            padding-top: 44px;
+            .pw-column-header-group {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: auto;
+                background: #fff;
+                z-index: 2;
+                .pw-column-headers {
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border-spacing: 10px 0;
+                    display: table;
+                    list-style: none;
+                    margin: 0;
+                    table-layout: fixed;
+                    width: 100%;
+                    padding: 0;
+                    padding-top: 5px;
+                    margin: 0 10px 0 -10px;
+                    li.pw-column {
+                        padding: 10px;
+                        -webkit-border-radius: 4px 4px 0 0;
+                        border-radius: 4px 4px 0 0;
+                        background: #F4F5F7;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        display: table-cell;
+                        list-style: none;
+                        margin: 0;
+                        position: relative;
+                        vertical-align: top;
+                        border-bottom-width: 5px;
+                        .pw-column-header-flex {
+                            display: flex;
+                            flex-wrap: wrap;
+                            .pw-column-header-flexi {
+                                display: flex;
+                                max-width: 100%;
+                                h2 {
+                                    color: #5E6C84;
+                                    font-size: 0.85714286em;
+                                    font-weight: 600;
+                                    line-height: 1.33333333;
+                                    margin-top: 20px;
+                                    text-transform: uppercase;
+                                    display: inline-block;
+                                    font-weight: normal;
+                                    margin: 0 5px 0 0;
+                                    margin-top: 3px;
+                                    flex: 0 100 auto;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    word-wrap: break-word;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pw-swimlane {
+                &:last-of-type {
+                    margin-bottom: 50px;
+                }
+                .pw-columns {
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border-spacing: 10px 0;
+                    display: table;
+                    list-style: none;
+                    table-layout: fixed;
+                    width: 100%;
+                    padding: 0;
+                    margin: 0 10px 0 -10px;
+                    li.pw-column {
+                        -webkit-border-radius: 0 0 4px 4px;
+                        border-radius: 0 0 4px 4px;
+                        background: #F4F5F7;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        display: table-cell;
+                        list-style: none;
+                        margin: 0;
+                        position: relative;
+                        vertical-align: top;
+                        padding: 1px 5px 0;
+                        .pw-wrap-issue {
+                            width: 100%;
+                            -moz-transition: all 100ms ease-in-out;
+                            -ms-transition: all 100ms ease-in-out;
+                            -webkit-transition: all 100ms ease-in-out;
+                            transition: all 100ms ease-in-out;
+                            .pw-issue {
+                                border: 0;
+                                border-radius: 2px;
+                                box-shadow: 0px 1px 2px 0px rgba(9, 30, 66, 0.25);
+                                background: #fff;
+                                color: #333;
+                                cursor: move;
+                                font-size: 14px;
+                                margin-top: 5px;
+                                margin-bottom: 5px;
+                                padding: 10px;
+                                position: relative;
+                                transition: background-color 140ms ease-in-out, border-color 75ms ease-in-out;
+                                &.selected {
+                                    background: #deebff;
+                                }
+                                .pw-summary {
+                                    color: #172B4D;
+                                    display: block;
+                                    box-sizing: content-box;
+                                    line-height: 1.42857143;
+                                    max-height: 4.28571429em;
+                                    overflow: hidden;
+                                }
+                                .pw-stat-fields {
+                                    display: -webkit-flex;
+                                    display: -ms-flexbox;
+                                    display: flex;
+                                    -webkit-flex-wrap: nowrap;
+                                    -ms-flex-wrap: nowrap;
+                                    flex-wrap: nowrap;
+                                    -webkit-justify-content: space-between;
+                                    -ms-flex-pack: justify;
+                                    -ms-justify-content: space-between;
+                                    justify-content: space-between;
+                                    margin-top: 0;
+                                    overflow: hidden;
+                                    .pw-row {
+                                        margin-right: 5px;
+                                        -webkit-flex: 1 0 auto;
+                                        -ms-flex: 1 0 auto;
+                                        flex: 1 0 auto;
+                                        margin-top: 10px;
+                                        max-width: 100%;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        &.stat-2{
+                                            -webkit-flex: 1 1 auto;
+                                            -ms-flex: 1 1 auto;
+                                            flex: 1 1 auto;
+                                            display: -webkit-flex;
+                                            display: -ms-flexbox;
+                                            display: flex;
+                                            -webkit-flex-direction: row-reverse;
+                                            -ms-flex-direction: row-reverse;
+                                            flex-direction: row-reverse;
+                                        }
+                                        .pw-field-icon {
+                                            &+.pw-field-icon {
+                                                margin-left: 5px;
+                                            }
+                                            i {
+                                                top: 1px;
+                                                position: relative;
+                                            }
+                                            .pw-estimate {
+                                                text-transform: lowercase;
+                                                vertical-align: middle;
+                                                font-size: 12px;
+                                                font-weight: 600;
+                                                line-height: 16px;
+                                                background-color: #dfe1e6;
+                                                color: #172b4d;
+                                                height: 16px;
+                                                max-height: 16px;
+                                                min-width: 12px;
+                                                padding-left: 7px;
+                                                padding-right: 7px;
+                                                background: rgba(0,0,0,0.2);
+                                                border-radius: 2em;
+                                                display: inline-block;
+                                                margin: 0;
+                                                min-height: 1em;
+                                                position: relative;
+                                                text-align: center;
+                                                text-decoration: none;
+                                                text-shadow: none;
+                                            }
+                                        }
+                                        .pw-key{
+                                            color: #5E6C84;
+                                            line-height: 24px;
+                                            vertical-align: middle;
+                                            margin-right: 5px;
+                                            display: flex;
+                                            min-width: 0;
+                                            .pw-p-key{
+                                                flex: 0 10000 auto;
+                                                overflow: hidden;
+                                                text-align: right;
+                                                text-overflow: ellipsis;
+                                            }
+                                            .pw-p-number{
+                                                direction: rtl;
+                                                flex: 0 1 auto;
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <div class="animated fadeIn">
   <div class="pw-page-panel">
-    <app-scrum-header></app-scrum-header>
+    <app-active-sprint-header></app-active-sprint-header>
     <div class="pw-content-main">
       <div class="pw-realative">
         <div class="pw-operations">
@@ -47,24 +47,7 @@
             </div>
           </div>
         </div>
-        <div class="pw-plan">
-          <div class="pw-plan-group">
-            <div class="pw-classification-menu-column">
-              <ul class="pw-classification-menu">
-                <li>
-                  <span class="pw-inner">Versions</span>
-                </li>
-                <li>
-                  <span class="pw-inner">Epics</span>
-                </li>
-              </ul>
-            </div>
-            <!-- <app-version class="pw-version-column"></app-version>
-            <app-epic class="pw-epic-column"></app-epic> -->
-            <app-scrum-main class="pw-scrum-main-column"></app-scrum-main>
-            <app-scrum-detail class="pw-detail-view"></app-scrum-detail>
-          </div>
-        </div>
+        <app-sprint-progress></app-sprint-progress>
       </div>
     </div>
   </div>

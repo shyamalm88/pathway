@@ -20,6 +20,10 @@ export const routes: Routes = [
       {
         path: 'backlog',
         loadChildren: './scrum/scrum.module#ScrumModule'
+      },
+      {
+        path: 'activesprint',
+        loadChildren: './active-sprint/active-sprint.module#ActiveSprintModule'
       }
     ]
   }
