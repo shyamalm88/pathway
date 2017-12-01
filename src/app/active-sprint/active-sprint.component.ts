@@ -13,18 +13,6 @@ export class ActiveSprintComponent implements OnInit {
   constructor(private http: HttpService, private error: ErrorDataService) { }
 
   ngOnInit() {
-    this.getData();
-  }
-  private getData() {
-    this.http.getData('https://jsonplaceholder.typicode.com/users/11')
-      .subscribe(
-      (data) => {
-        console.log(data);
-      },
-      (error) => {
-        this.error.sendErrorData(error);
-      }
-      );
   }
 
 }
