@@ -1,8 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ErrorDataService } from './shared/services/error-data-service/error-data.service';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>'
+  templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor(private error: ErrorDataService) { }
+
+  ngOnInit() {
+    this.error.showError();
+  }
+
+
 }
