@@ -16,7 +16,7 @@ export class ActiveSprintComponent implements OnInit {
     this.getData();
   }
   private getData() {
-    this.http.getData('https://jsonplaceholder.typicode.com/users/1')
+    this.http.getData('https://jsonplaceholder.typicode.com/users/11')
       .subscribe(
       (data) => {
         console.log(data);
