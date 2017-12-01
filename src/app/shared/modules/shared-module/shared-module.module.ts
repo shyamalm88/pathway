@@ -10,6 +10,7 @@ import { MessageService } from 'primeng/components/common/messageservice';
 import { HttpService } from '../../services/http-service/http.service';
 import { UserDataService } from '../../services/user-data-service/user-data.service';
 import { ErrorDataService } from '../../services/error-data-service/error-data.service';
+import { TitleService } from '../../services/title-service/title.service';
 
 @NgModule({
   imports: [
@@ -34,7 +35,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [HttpService, UserDataService, MessageService, ErrorDataService]
+      providers: [HttpService, UserDataService, MessageService, ErrorDataService, TitleService]
     };
   }
 }
