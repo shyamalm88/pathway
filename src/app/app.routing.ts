@@ -26,7 +26,11 @@ export const routes: Routes = [
         loadChildren: './active-sprint/active-sprint.module#ActiveSprintModule'
       }
     ]
-  }
+  },
+  {
+    path: 'auth',
+    loadChildren: './authentication/authentication.module#AuthenticationModule'
+  },
 ];
 
 @NgModule({
