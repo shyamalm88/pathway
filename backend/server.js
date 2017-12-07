@@ -10,9 +10,9 @@ var router = express.Router();
 
 
 
-// //mongodb connection
-// var configDB = require('./config/database.js');
-// mongoose.connect(configDB.url);
+//mongodb connection
+var configDB = require('./config/database.js');
+mongoose.connect(configDB.url);
 
 
 
@@ -34,6 +34,16 @@ app.use(cookieParser());
 
 
 
+require('./config/passport')(passport); // pass passport for configuration
+
+//cookie configuration
+var sess = {
+    secret: 'ArghyaPathway', // session secret
+    resave: true,
+    saveUninitialized: true,
+    cookie: {},
+    rolling: true
+};
 
 
 
@@ -56,6 +66,13 @@ app.use(function(req, res, next) {
 });
 
 
+//passport initialize and passport session initialize
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+
+// routes ======================================================================
+require('./routes/authRoutes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
 
 //indicating routing files to index.html
