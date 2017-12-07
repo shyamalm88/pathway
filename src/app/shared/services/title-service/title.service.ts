@@ -14,7 +14,6 @@ export class TitleService {
   public setTitle() {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        console.log(this.router.routerState, this.router.routerState.root);
         const title = this.getTitle(this.router.routerState, this.router.routerState.root).join(' - ');
         this.titleService.setTitle(title);
       }

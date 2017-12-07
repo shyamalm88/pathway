@@ -27,6 +27,7 @@ export class ErrorDataService {
     this.getErrorData()
       .subscribe((err) => {
         if (err) {
+          console.log('error status: ' + err.status);
           if (err.status === 404) {
             error = err.status + ' Not Found Error.';
           } else if (err.status === 400) {
@@ -38,10 +39,8 @@ export class ErrorDataService {
           } else if (err.status >= 500) {
             error = err.status + ' Internal Server Error.';
           }
-
+          this.messageService.add({ severity: 'error', summary: 'Error Message', detail: error });
         }
-        this.messageService.add({ severity: 'error', summary: 'Error Message', detail: error });
-        // this.clearError();
       });
   }
 

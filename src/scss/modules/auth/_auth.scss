@@ -1,0 +1,113 @@
+$color_1: #1b2431;
+$color_2: #7f8fa4;
+.app.app-fh {
+    height: calc(100vh);
+    .app-container {
+        height: 100%;
+    }
+}
+
+.app {
+    .app-container {
+        float: left;
+        width: 100%;
+        position: relative;
+        background: #eee;
+    }
+    .app-login-box {
+        width: 360px;
+        margin: 50px auto;
+        background: #fff;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        zoom: 1;
+        box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.05);
+        &:after {
+            content: "";
+            display: table;
+        }
+        &:before {
+            content: "";
+            display: table;
+        }
+        .app-login-box-title {
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 0 30px;
+            .title {
+                font-size: 18px;
+                font-weight: 400;
+                color: $color_1;
+                margin-bottom: 5px;
+            }
+            .subtitle {
+                font-size: 14px;
+                color: $color_2;
+            }
+        }
+        .app-login-box-container {
+            float: left;
+            width: 100%;
+            padding: 0 30px 10px;
+            >.title {
+                float: left;
+                width: 100%;
+                font-size: 14px;
+                font-weight: 400;
+                color: $color_2;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+        .app-login-box-footer {
+            float: left;
+            width: 100%;
+            background: #fafafa;
+            padding: 15px 30px;
+            -moz-border-radius-topright: 0;
+            -moz-border-radius-bottomright: 5px;
+            -moz-border-radius-bottomleft: 5px;
+            -moz-border-radius-topleft: 0;
+            text-align: center;
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+        }
+        .app-login-box-user {
+            width: 100%;
+            float: left;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 30px 30px 0;
+            img {
+                width: 100px;
+                border: 1px solid #dce1e4;
+                padding: 5px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.padding-top-30 {
+    padding-top: 30px !important;
+}
+
+.margin-top-20 {
+    margin-top: 20px !important;
+}
+
+.margin-top-10 {
+    margin-top: 10px !important;
+}
+
+.infoTxt {
+    color: #484848;
+    a {
+        color: #2361bd;
+    }
+}
