@@ -11,11 +11,14 @@ import { HttpService } from '../../services/http-service/http.service';
 import { UserDataService } from '../../services/user-data-service/user-data.service';
 import { ErrorDataService } from '../../services/error-data-service/error-data.service';
 import { TitleService } from '../../services/title-service/title.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     AccordionModule.forRoot(),
     NgSpinKitModule,
@@ -29,6 +32,8 @@ import { TitleService } from '../../services/title-service/title.service';
     NgSpinKitModule,
     FileUploadModule,
     GrowlModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule {

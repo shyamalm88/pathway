@@ -4,6 +4,8 @@
 @import 'modules/pw-left-side-menu';
 @import 'modules/pw-left-side-project-nav';
 @import 'modules/main-content';
+@import 'modules/auth/auth';
+
 #page-body {
     display: flex;
     min-width: fit-content;
@@ -53,5 +55,19 @@
     }
     &-lowest{
         color: #4caf50
+    }
+}
+a{
+    color: #0052cc;
+    &:hover{
+        color: #0044a2;
+    }
+}
+.btn-primary {
+    background: #0052cc;
+    color: #fff;
+    &:hover, &:active, &:active:hover{
+        background: #0044a2;
+        color: #fff;
     }
 }
