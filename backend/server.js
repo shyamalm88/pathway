@@ -107,8 +107,10 @@ app.use('/api', router);
 
 
 var issueApi = require('./routes/issueRoute');
+var sprintApi = require('./routes/sprintRoute');
 
 app.use('/api', issueApi);
+app.use('/api', sprintApi);
 
 
 

@@ -1,33 +1,33 @@
 var mongoose = require('mongoose');
 var plugin = require('mongoose-createdat-updatedat');
 var Schema = mongoose.Schema;
-var ScrumSchema = new Schema({
-    scrumName: String,
-    scrumDescription: String,
-    scrumId: String,
-    scrumKey: String,
-    scrumCreatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    scrumUpdatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    scrumAssignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+var SprintSchema = new Schema({
+    sprintName: String,
+    sprintDescription: String,
+    sprintId: String,
+    sprintKey: String,
+    sprintCreatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    sprintUpdatedBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    sprintAssignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
 });
 
 var options = {
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 }
-ScrumSchema.plugin(plugin, options);
+SprintSchema.plugin(plugin, options);
 
-var Scrum = mongoose.model('Scrum', ScrumSchema);
+var Sprint = mongoose.model('Scrum', SprintSchema);
 
 module.exports.findOne = function(index, callback) {
-    Scrum.findById(index, function(err, result) {
+    Sprint.findById(index, function(err, result) {
         if (err) throw err;
         callback(result);
     });
 };
 
 module.exports.findAll = function(callback) {
-    Scrum.find({}, function(err, result) {
+    Sprint.find({}, function(err, result) {
         if (err) throw err;
         callback(result);
     })
@@ -44,7 +44,7 @@ module.exports.addNewIssue = function(body, callback) {
         scrumAssignedTo: body.SCRUM_ASSIGNED_TO,
     })
 
-    scrum.save(function(err, result) {
+    sprint.save(function(err, result) {
         if (err) throw err;
         callback({
             message: "Successfully added Scrum",
@@ -55,7 +55,7 @@ module.exports.addNewIssue = function(body, callback) {
 }
 
 module.exports.editScrum = function(body, index, callback) {
-    Scrum.findById(index, function(err, result) {
+    Sprint.findById(index, function(err, result) {
         if (err) throw err;
         if (!result) {
             callback({
@@ -83,7 +83,7 @@ module.exports.editScrum = function(body, index, callback) {
 }
 
 module.exports.deleteScrum = function(index, callback) {
-    Scrum.remove({ _id: index }, function(err, result) {
+    Sprint.remove({ _id: index }, function(err, result) {
         callback({
             message: "Successfully deleted the Issue",
             data: result
