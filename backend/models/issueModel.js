@@ -39,7 +39,6 @@ module.exports.findOne = function(index, callback) {
 module.exports.findAll = function(callback) {
     Issue.find({}, function(err, result) {
         if (err) throw err;
-        console.log(result);
         callback(result);
     })
 }

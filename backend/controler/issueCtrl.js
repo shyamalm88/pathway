@@ -5,7 +5,7 @@ module.exports.getIssueDetails = function(params, callback) {
 }
 
 module.exports.getAllIssues = function(callback) {
-    console.log("Fetching all issues");
+    // console.log("Fetching all issues");
     issueDA.findAll(callback);
 }
 
