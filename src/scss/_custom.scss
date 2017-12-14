@@ -5,7 +5,7 @@
 @import 'modules/pw-left-side-project-nav';
 @import 'modules/main-content';
 @import 'modules/auth/auth';
-
+@import 'modules/create-project/create-project-modal';
 #page-body {
     display: flex;
     min-width: fit-content;
@@ -53,20 +53,24 @@
     &-high {
         color: #f44336
     }
-    &-lowest{
+    &-lowest {
         color: #4caf50
     }
 }
-a{
+
+a {
     color: #0052cc;
-    &:hover{
+    &:hover {
         color: #0044a2;
     }
 }
+
 .btn-primary {
     background: #0052cc;
     color: #fff;
-    &:hover, &:active, &:active:hover{
+    &:hover,
+    &:active,
+    &:active:hover {
         background: #0044a2;
         color: #fff;
     }

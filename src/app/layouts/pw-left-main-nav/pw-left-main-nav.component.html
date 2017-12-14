@@ -1,10 +1,10 @@
 <div class="pw-left-main-nav">
-  <div class="pw-left-main-nav-container">
-    <div class="pw-left-main-nav-upper">
-      <div class="pw-left-main-nav-upper-container">
-        <div class="pw-logo">
-          <a href="">
-            <span class="pw-logo-inner">
+    <div class="pw-left-main-nav-container">
+        <div class="pw-left-main-nav-upper">
+            <div class="pw-left-main-nav-upper-container">
+                <div class="pw-logo">
+                    <a href="">
+                        <span class="pw-logo-inner">
               <span class="pw-l-i">
                 <svg width="24" height="24" viewBox="0 0 24 24" focusable="false" role="img" label="Software icon" aria-labelledby="title-n706bvl"
                   style="height: 32px; max-height: 100%; max-width: 100%; overflow: hidden; vertical-align: bottom; width: 32px;">
@@ -28,34 +28,43 @@
                 </svg>
 
               </span>
-            </span>
-          </a>
-        </div>
-        <div class="pw-search-add">
-          <div class="pw-search">
-            <span class="pw-search-icon">
+                        </span>
+                    </a>
+                </div>
+                <div class="pw-search-add">
+                    <div class="pw-search">
+                        <span class="pw-search-icon">
               <i class="ion-ios-search-strong" aria-hidden="true"></i>
             </span>
-          </div>
-          <div class="pw-add">
-            <span class="pw-add-icon">
+                    </div>
+                    <div class="pw-add">
+                        <span class="pw-add-icon" containerClass="createMenuPopover" [popover]="createMenuTemplate" Î placement="right" outsideClick="true">
               <i class="ion-plus" aria-hidden="true"></i>
             </span>
-          </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="pw-left-main-nav-bottom-container">
+            <div class="options pw-bottom-icons">
+                <i class="ion-android-menu" aria-hidden="true"></i>
+            </div>
+            <div class="help pw-bottom-icons">
+                <i class="ion-help-circled" aria-hidden="true"></i>
+            </div>
+            <div class="account pw-bottom-icons">
+                <i class="ion-person" aria-hidden="true"></i>
+            </div>
+        </div>
     </div>
-    <div class="pw-left-main-nav-bottom-container">
-      <div class="options pw-bottom-icons">
-        <i class="ion-android-menu" aria-hidden="true"></i>
-      </div>
-      <div class="help pw-bottom-icons">
-        <i class="ion-help-circled" aria-hidden="true"></i>
-      </div>
-      <div class="account pw-bottom-icons">
-        <i class="ion-person" aria-hidden="true"></i>
-      </div>
-    </div>
-  </div>
 </div>
 <app-pw-left-project-nav class="pw-left-project-nav"></app-pw-left-project-nav>
+
+<ng-template #createMenuTemplate>
+    <div class="createMenu">
+        <ul>
+            <li><a href="#" (click)="openCreateProjectModal(); false"><i class="fa fa-tasks"></i> Create Project</a></li>
+            <li><a href="#"><i class="fa fa-clone"></i> Create Board</a></li>
+        </ul>
+    </div>
+</ng-template>

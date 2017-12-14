@@ -23,6 +23,7 @@ import { SharedModule } from './shared/modules/shared-module/shared-module.modul
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule.forRoot(),
   ],
