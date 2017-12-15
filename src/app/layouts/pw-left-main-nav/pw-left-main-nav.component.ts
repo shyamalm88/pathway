@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CreateProjectModalService } from '../../shared/services/create-project-modal-service/createProjectModal.service';
+import { CreateBoardModalService } from '../../shared/services/create-board-modal-service.1/createBoardModal.service';
 
 @Component({
   selector: 'app-pw-left-main-nav',
@@ -10,12 +11,15 @@ import { CreateProjectModalService } from '../../shared/services/create-project-
 export class PwLeftMainNavComponent implements OnInit {
 
 
-  constructor(private CPM: CreateProjectModalService) { }
+  constructor(private CPM: CreateProjectModalService, private CBM: CreateBoardModalService) { }
 
   ngOnInit() {
   }
 
-  openCreateProjectModal() {
+  public openCreateProjectModal() {
     this.CPM.createModal(true);
+  }
+  public openCreateBoardModal() {
+    this.CBM.createModal(true);
   }
 }
