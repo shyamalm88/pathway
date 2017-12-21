@@ -7,6 +7,11 @@ $color_2: #7f8fa4;
     }
 }
 
+.avatar {
+    margin: auto;
+    background: #0052cc !important;
+}
+
 .app {
     .app-container {
         float: left;
@@ -83,8 +88,8 @@ $color_2: #7f8fa4;
             padding: 30px 30px 0;
             img {
                 width: 100px;
-                border: 1px solid #dce1e4;
-                padding: 5px;
+                // border: 1px solid #dce1e4;
+                // padding: 5px;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;

@@ -1,0 +1,10 @@
+<p-dialog [(visible)]="display" modal="modal" width="300" [draggable]="false" styleClass="createProjectModal" [responsive]="true">
+    <p-header>
+        Header content here
+    </p-header>
+    Content
+    <p-footer>
+        <button type="button" (click)="display=false" class="btn btn-primary">Accept</button>
+        <button type="button" (click)="display=false" class="btn btn-secondary">Cancle</button>
+    </p-footer>
+</p-dialog>

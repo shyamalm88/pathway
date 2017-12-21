@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpService } from '../../shared/services/http-service/http.service';
 import { Router } from '@angular/router';
+import { AppSettings } from '../../shared/constants/constant';
 
 @Component({
   selector: 'app-signup',
@@ -12,12 +13,14 @@ import { Router } from '@angular/router';
 export class SignupComponent implements OnInit {
   public signUpForm: FormGroup;
   public submitted: Boolean;
+  // tslint:disable-next-line:max-line-length
   private emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   private passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$/;
   private specialCharRegex = /^(?=[a-zA-Z0-9~@#$^*()_+=[\]{}|\\,.?: -]*$)(?!.*[<>'"/;`%])/;
   private userSignupdata;
-  private succesMessage: Boolean = false;
-  private errorMessage: Boolean = false;
+  public succesMessage: Boolean = false;
+  public errorMessage: Boolean = false;
+  public alreadyUserMessage: Boolean = false;
   constructor(private fb: FormBuilder, private httpService: HttpService, private router: Router) { }
 
   ngOnInit() {
@@ -44,14 +47,14 @@ export class SignupComponent implements OnInit {
         ]]
       })
     });
-
-
-
   }
 
+
+
   signup(value, isValid: boolean) {
+    console.log(value);
     this.submitted = true; // set form submit to true
-    this.httpService.addData(URL + 'auth/user', this.signUpForm.value)
+    this.httpService.addData(AppSettings.URL + 'signup', value)
       .subscribe(
       (data): void => {
         this.userSignupdata = data;
@@ -60,7 +63,13 @@ export class SignupComponent implements OnInit {
           this.errorMessage = false;
           const self = this;
           setTimeout(function () {
-            self.router.navigate(['login']);
+            self.router.navigate(['auth/login']);
+          }, 1000);
+        }else if (this.userSignupdata.message === 'Already a user') {
+          this.alreadyUserMessage = true;
+          const self = this;
+          setTimeout(function () {
+            self.router.navigate(['auth/login']);
           }, 1000);
         } else {
           this.errorMessage = true;

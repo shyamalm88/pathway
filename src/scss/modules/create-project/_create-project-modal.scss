@@ -1,0 +1,9 @@
+.createProjectModal {
+    width: calc(80vw) !important;
+    .ui-widget-header {
+        background: #f6f7f9;
+    }
+    .ui-widget-content.ui-dialog-footer {
+        border-top: 1px solid #e5e6e6;
+    }
+}
