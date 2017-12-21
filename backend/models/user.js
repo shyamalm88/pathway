@@ -6,10 +6,12 @@ var plugin = require('mongoose-createdat-updatedat');
 var Schema = mongoose.Schema;
 var User = new Schema({
     local: {
-        name: String,
+        displayName: String,
         email: String,
         password: String,
-        image: String
+        image: String,
+        firstName: String,
+        lastName: String,
     }
 
 });

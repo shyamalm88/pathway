@@ -20,7 +20,6 @@ import { CreateProjectModalService } from "../../services/create-project-modal-s
 import { CreateProjectModalModule } from "../create-project-modal/create-project-modal.module";
 import { CreateBoardModalModule } from "../create-board-modal/create-board-modal.module";
 import { CreateBoardModalService } from "../../services/create-board-modal-service.1/createBoardModal.service";
-
 @NgModule({
   imports: [
     CommonModule,
@@ -35,7 +34,7 @@ import { CreateBoardModalService } from "../../services/create-board-modal-servi
     GrowlModule,
     DialogModule,
     CreateProjectModalModule,
-    CreateBoardModalModule
+    CreateBoardModalModule,
   ],
   declarations: [],
   exports: [
@@ -49,7 +48,7 @@ import { CreateBoardModalService } from "../../services/create-board-modal-servi
     ReactiveFormsModule,
     DialogModule,
     CreateProjectModalModule,
-    CreateBoardModalModule
+    CreateBoardModalModule,
   ]
 })
 export class SharedModule {

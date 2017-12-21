@@ -13,20 +13,25 @@ module.exports = function(app, passport) {
     // SIGNUP =============================
     app.post('/signup', function(req, res, next) {
         USER.findOne({
-            'local.email': req.body.email
+            'local.email': req.body.user.email
         }, function(err, user) {
             if (err) {
                 console.log(err)
             }
 
             if (user) {
-
+                res.send({
+                    message: "Already a user",
+                    // data: result
+                });
             } else {
                 var newUser = new USER();
-                newUser.local.name = req.body.firstName + ' ' + req.body.lastName;
-                newUser.local.email = req.body.email;
-                newUser.local.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(8), null);
-                newUser.local.image = gravatar.url(req.body.email, {
+                newUser.local.displayName = (req.body.firstName + ' ' + req.body.lastName).toLowerCase();
+                newUser.local.firstName = (req.body.firstName).toLowerCase();
+                newUser.local.lastName = (req.body.lastName).toLowerCase();
+                newUser.local.email = (req.body.user.email).toLowerCase();
+                newUser.local.password = bcrypt.hashSync(req.body.user.password, bcrypt.genSaltSync(8), null);
+                newUser.local.image = gravatar.url((req.body.user.email).toLowerCase(), {
                     s: '100',
                     r: 'x',
                     d: 'retro'
@@ -35,10 +40,10 @@ module.exports = function(app, passport) {
 
                 newUser.save(function(err, result) {
                     if (err) throw err;
-                    console.log(result);
+                    // console.log(result);
                     res.send({
                         message: "Successfully added user",
-                        user: result
+                        data: result
                     });
                 });
             }
