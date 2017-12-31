@@ -3,16 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
+import { AuthGuardService } from './shared/services/auth-service/auth-guard.service';
 
 export const routes: Routes = [
   {
     path: '',
     redirectTo: 'backlog',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
   {
     path: '',
     component: FullLayoutComponent,
+    canActivate: [AuthGuardService],
     data: {
       title: 'Home'
     },
@@ -30,11 +32,11 @@ export const routes: Routes = [
   {
     path: 'auth',
     loadChildren: './authentication/authentication.module#AuthenticationModule'
-  },
+  }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {}

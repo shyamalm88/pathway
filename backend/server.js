@@ -37,14 +37,7 @@ app.use(cookieParser());
 require('./config/passport')(passport); // pass passport for configuration
 
 //cookie configuration
-var sess = {
-    secret: 'ArghyaPathway', // session secret
-    resave: true,
-    saveUninitialized: true,
-    cookie: {},
-    rolling: true
-};
-
+app.use(session({ secret: 'ArghyaPathway' }));
 
 
 

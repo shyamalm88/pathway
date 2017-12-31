@@ -18,7 +18,7 @@ export class HttpService {
 
   }
 
-  addData(URL: string, body: Object): Observable<any[]> {
+  postData(URL: string, body: Object): Observable<any[]> {
     const headers = new Headers({ 'Content-Type': 'application/json' });
     const options = new RequestOptions({ headers: headers });
 
