@@ -1,25 +1,27 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { HttpModule } from "@angular/http";
-import { ModuleWithProviders } from "@angular/core/src/metadata/ng_module";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
+import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import {
   BsDropdownModule,
   AccordionModule,
   PopoverModule
-} from "ngx-bootstrap";
-import { NgSpinKitModule } from "ng-spin-kit";
-import { FileUploadModule } from "ng2-file-upload";
-import { GrowlModule, DialogModule } from "primeng/primeng";
-import { MessageService } from "primeng/components/common/messageservice";
-import { HttpService } from "../../services/http-service/http.service";
-import { UserDataService } from "../../services/user-data-service/user-data.service";
-import { ErrorDataService } from "../../services/error-data-service/error-data.service";
-import { TitleService } from "../../services/title-service/title.service";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { CreateProjectModalService } from "../../services/create-project-modal-service/createProjectModal.service";
-import { CreateProjectModalModule } from "../create-project-modal/create-project-modal.module";
-import { CreateBoardModalModule } from "../create-board-modal/create-board-modal.module";
-import { CreateBoardModalService } from "../../services/create-board-modal-service.1/createBoardModal.service";
+} from 'ngx-bootstrap';
+import { NgSpinKitModule } from 'ng-spin-kit';
+import { FileUploadModule } from 'ng2-file-upload';
+import { GrowlModule, DialogModule } from 'primeng/primeng';
+import { MessageService } from 'primeng/components/common/messageservice';
+import { HttpService } from '../../services/http-service/http.service';
+import { UserDataService } from '../../services/user-data-service/user-data.service';
+import { ErrorDataService } from '../../services/error-data-service/error-data.service';
+import { TitleService } from '../../services/title-service/title.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreateProjectModalService } from '../../services/create-project-modal-service/createProjectModal.service';
+import { CreateProjectModalModule } from '../create-project-modal/create-project-modal.module';
+import { CreateBoardModalModule } from '../create-board-modal/create-board-modal.module';
+import { CreateBoardModalService } from '../../services/create-board-modal-service.1/createBoardModal.service';
+import { AuthService } from '../../services/auth-service/auth.service';
+import { AuthGuardService } from '../../services/auth-service/auth-guard.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -34,7 +36,7 @@ import { CreateBoardModalService } from "../../services/create-board-modal-servi
     GrowlModule,
     DialogModule,
     CreateProjectModalModule,
-    CreateBoardModalModule,
+    CreateBoardModalModule
   ],
   declarations: [],
   exports: [
@@ -48,7 +50,7 @@ import { CreateBoardModalService } from "../../services/create-board-modal-servi
     ReactiveFormsModule,
     DialogModule,
     CreateProjectModalModule,
-    CreateBoardModalModule,
+    CreateBoardModalModule
   ]
 })
 export class SharedModule {
@@ -62,7 +64,9 @@ export class SharedModule {
         ErrorDataService,
         TitleService,
         CreateProjectModalService,
-        CreateBoardModalService
+        CreateBoardModalService,
+        AuthService,
+        AuthGuardService
       ]
     };
   }

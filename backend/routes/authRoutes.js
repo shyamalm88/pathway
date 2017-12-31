@@ -10,7 +10,23 @@ module.exports = function(app, passport) {
         res.redirect('/login');
     });
 
-    // SIGNUP =============================
+    // find user
+    app.post('/finduser', function(req, res, next) {
+            USER.findOne({
+                'local.email': req.body.email
+            }, function(err, user) {
+                if (err) {
+                    console.log(err)
+                }
+                if (user) {
+                    res.send({
+                        message: "details of " + req.body.email,
+                        data: user
+                    });
+                }
+            }).select("-local.password")
+        })
+        // SIGNUP =============================
     app.post('/signup', function(req, res, next) {
         USER.findOne({
             'local.email': req.body.user.email
@@ -61,33 +77,25 @@ module.exports = function(app, passport) {
                 return res.send(info);
             }
             if (!user) {
-                return res.send({
+                return res.status(401).send({
                     'message': 'Not a register user'
                 });
             }
 
             req.logIn(user, function(err) {
                 if (err) {
-                    return next(err);
+                    return res.status(500).json({
+                        err: 'Could not log in user'
+                    });
                 }
-                return res.send({
-                    'message': 'successfully logged in'
+                return res.status(200).send({
+                    'message': 'successfully logged in',
+                    data: user.local.email
                 });
             });
         })(req, res, next);
     });
-
-    app.get('/backlog', isLoggedIn, function(req, res, next) {
-        var user = req.user;
-        //res.json(user);
-        next();
+    app.get('/isloggedin', function(req, res, next) {
+        res.send(req.isAuthenticated());
     });
-}
-
-
-// route middleware to ensure user is logged in
-function isLoggedIn(req, res, next) {
-    if (req.isAuthenticated())
-        return next();
-    res.redirect('auth/login');
 }

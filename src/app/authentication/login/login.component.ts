@@ -1,14 +1,14 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
-import { ActivatedRoute, Router } from "@angular/router";
-import { FormGroup, Validators, FormBuilder } from "@angular/forms";
-import { HttpService } from "../../shared/services/http-service/http.service";
-import { ErrorDataService } from "../../shared/services/error-data-service/error-data.service";
-import { AppSettings } from "../../shared/constants/constant";
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { HttpService } from '../../shared/services/http-service/http.service';
+import { ErrorDataService } from '../../shared/services/error-data-service/error-data.service';
+import { AppSettings } from '../../shared/constants/constant';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.scss"],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent implements OnInit {
@@ -28,29 +28,31 @@ export class LoginComponent implements OnInit {
     private error: ErrorDataService
   ) {
     this.logInForm = this.fb.group({
-      email: ["", [Validators.required]],
-      password: ["", [Validators.required]]
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 
   ngOnInit() {}
 
-
-
   public login(value, isValid: boolean) {
     this.submitted = true;
-    this.httpService.addData(AppSettings.URL + "login", value).subscribe(
+    this.httpService.postData(AppSettings.URL + 'login', value).subscribe(
       (data): void => {
         this.userLoggedIndata = data;
-        if (this.userLoggedIndata.message === "successfully logged in") {
+        if (this.userLoggedIndata.message === 'successfully logged in') {
           this.loginSuccessMessage = true;
           this.loginUserErrorMessage = false;
           this.loginPasswordErrorMessage = false;
+          this.httpService.postData(AppSettings.URL + 'finduser', {'email': this.userLoggedIndata['data']})
+          .subscribe((udata) => {
+            sessionStorage.setItem('user', JSON.stringify(udata['data']));
+          });
           const self = this;
           setTimeout(function() {
-            self.router.navigate([""]);
+            self.router.navigate(['']);
           }, 1000);
-        } else if (this.userLoggedIndata.message === "Not a register user") {
+        } else if (this.userLoggedIndata.message === 'Not a register user') {
           this.loginUserErrorMessage = true;
           this.loginPasswordErrorMessage = false;
         } else {

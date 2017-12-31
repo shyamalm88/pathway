@@ -54,7 +54,7 @@ export class SignupComponent implements OnInit {
   signup(value, isValid: boolean) {
     console.log(value);
     this.submitted = true; // set form submit to true
-    this.httpService.addData(AppSettings.URL + 'signup', value)
+    this.httpService.postData(AppSettings.URL + 'signup', value)
       .subscribe(
       (data): void => {
         this.userSignupdata = data;
